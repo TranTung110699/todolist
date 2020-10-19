@@ -57,7 +57,7 @@ class EditJob extends Component {
         return  window.history.back();
     }
     render() {
-        const {code, name} = this.props.location.state.item;
+        //const {code, name} = this.props.location.state.item;
         return (
             <div>
                 <div align="center" className="title-creat">Edit Job</div>
@@ -69,7 +69,7 @@ class EditJob extends Component {
                                 type="text"
                                 className="form-search"
                                 onChange={this.handleChangeCode}
-                                defaultValue={code}
+                                defaultValue={this.state.code}
                             />
                         </div>
                         <div>
@@ -78,7 +78,7 @@ class EditJob extends Component {
                                 type="text"
                                 className="form-search"
                                 onChange={this.handleChangeName}
-                                defaultValue={name}
+                                defaultValue={this.state.name}
                             />
                         </div>
                         <div>

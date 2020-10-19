@@ -32,9 +32,9 @@ class JobList extends Component {
             render: (data, item) => (
                 // <Link to={`${routes.bestSeller}${item.cid}`}>Chi tiết</Link>
                 <Link to={{
-                    pathname: `/job-list/complete`,
+                    pathname: `/job-list/complete/${item.id}`,
                     state: { item }}}>
-                    <Checkbox key={item.id} checked={this.state.isChecked} onClick={this.checkboxChange(item.code,item.name)}></Checkbox>
+                    <Checkbox key={item.id} checked={this.state.isChecked} onClick={this.checkboxChange}></Checkbox>
                 </Link>
             ),
         },
@@ -62,14 +62,12 @@ class JobList extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: [],
             jobs:[],
             id:'',
             isChecked: false,
         }
         this.deleteJob = this.deleteJob.bind(this)
         this.componentDidMount = this.componentDidMount.bind(this)
-        this.checkboxChange = this.checkboxChange.bind(this)
     }
 
     componentDidMount() {
@@ -91,12 +89,10 @@ class JobList extends Component {
             });
     }
 
-    checkboxChange(code,name){
-        axios.post(`http://localhost:3005/completes`,{code,name})
-            .then(res => {
-                const completes = res.data;
-                this.setState({completes})
-            })
+    checkboxChange = () => {
+        this.setState({
+            isChecked: !this.state.isChecked,
+        });
     }
 
     render() {
