@@ -1,0 +1,30 @@
+.title-creat{
+  color: lime;
+  font-size: larger;
+}
+.form-todo-list{
+  text-align: center;
+  width: 100%;
+}
+.form-search{
+  height: 30px;
+  width: 35%;
+  border-radius: 10px;
+  border: 1px solid darkcyan;
+}
+.form-search:focus{
+  outline: none;
+}
+.check-box{
+  height: 30px;
+  width: 15%;
+}
+.submit-creat{
+  height: 30px;
+  width: 15%;
+  border-radius: 10px;
+  border: 1px solid darkcyan;
+}
+.submit-creat:focus{
+  background-color: darkcyan;
+}

@@ -1,0 +1,24 @@
+{
+  "jobs": [
+    {
+      "id": "j1",
+      "name": "Dev",
+      "status": 1
+    },
+    {
+      "id": "j2",
+      "name": "Do Task",
+      "status": 0
+    },
+    {
+      "id": "j3",
+      "name": "Fix Bug",
+      "status": 1
+    },
+    {
+      "id": "j4",
+      "name": "Find Bug",
+      "status": 0
+    }
+  ]
+}
